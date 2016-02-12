@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+setlocale(LC_MONETARY, locale_get_default());
+
+(@include_once __DIR__ . '/../vendor/autoload.php');
+
+use Symfony\Component\Console\Application;
+use App\SaintsburysScrapper\Commands\ScrapCommand;
+
+
+$app = new Application('Merkury CLI Console (Thanks Symfony Console!)', '0.1.0');
+$app->addCommands([
+    new ScrapCommand()
+]);
+$app->run();
