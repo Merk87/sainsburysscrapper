@@ -45,7 +45,7 @@ class FruitScrapperTest extends \PHPUnit_Framework_TestCase
      * Test private getData function to retrieval of the page content
      */
     public function testGetData(){
-        $url = 'http://www.sainsburys.co.uk/webapp/wcs/stores/servlet/CategoryDisplay?listView=true&orderBy=FAVOURITES_FIRST&parent_category_rn=12518&top_category=12518&langId=44&beginIndex=0&pageSize=20&catalogId=10137&searchTerm=&categoryId=185749&listId=&storeId=10151&promotionId=#langId=44&storeId=10151&catalogId=10137&categoryId=185749&parent_category_rn=12518&top_category=12518&pageSize=20&orderBy=FAVOURITES_FIRST&searchTerm=&beginIndex=0&hideFilters=true';
+        $url = 'http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html';
         $reflected = new ReflectionClass(FruitScrapper::class);
 
         $getDataMethod = $reflected->getMethod('getData');
@@ -62,7 +62,7 @@ class FruitScrapperTest extends \PHPUnit_Framework_TestCase
      * Test private function to retrieve information from product page.
      */
     public function testProductExtraInfo(){
-        $url = 'http://www.sainsburys.co.uk/shop/gb/groceries/ripe---ready/sainsburys-avocado-xl-pinkerton-loose-300g';
+        $url = 'http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/sainsburys-avocado-xl-pinkerton-loose-300g.html';
         $reflected = new ReflectionClass(FruitScrapper::class);
 
         $getDataMethod = $reflected->getMethod('getProductExtraInfo');
